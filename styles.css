@@ -28,7 +28,7 @@ STATUS BAR MENU
 }
 
 .MySnippets-statusbar-menu {
-  width: 290px;
+  width: fit-content;
   max-height: calc(100% - 90px);
 }
 
