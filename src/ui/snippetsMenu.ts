@@ -47,6 +47,8 @@ export default function snippetsMenu(
           customCss.setCssEnabledStatus(snippet, !isEnabled);
         }
 
+        setAttributes(buttonComponent.buttonEl, {"data-tooltip-position":"top"});
+
         toggleComponent
           .setValue(customCss.enabledSnippets.has(snippet))
           .onChange(changeSnippetStatus);
@@ -79,8 +81,9 @@ export default function snippetsMenu(
       const folderButton = new ButtonComponent(actionsDom);
       const addButton = new ButtonComponent(actionsDom);
 
-      setAttributes(reloadButton.buttonEl, { style: "margin-right: 3px" });
-      setAttributes(addButton.buttonEl, { style: "margin-left: 3px" });
+      setAttributes(reloadButton.buttonEl, { "data-tooltip-position":"top", style: "margin-right: 3px" });
+      setAttributes(folderButton.buttonEl, {"data-tooltip-position":"top"});
+      setAttributes(addButton.buttonEl, { "data-tooltip-position":"top", style: "margin-left: 3px" });
 
       reloadButton
         .setIcon("ms-reload")

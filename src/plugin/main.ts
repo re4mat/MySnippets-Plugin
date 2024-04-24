@@ -37,6 +37,7 @@ export default class MySnippetsPlugin extends Plugin {
     setAttributes(this.statusBarIcon, {
       "aria-label": "Configure Snippets",
       "aria-label-position": "top",
+      "data-tooltip-position":"top"
     });
     setIcon(this.statusBarIcon, "pantone-line");
 
